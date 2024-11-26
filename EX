@@ -1,0 +1,55 @@
+#include <stdio.h >
+#include<string .h>
+#include <stdlib.h>
+char*charge  chaine(int N);
+char*result=(char*) malloc(N+1);
+    if(result==Nuul)
+     printf("%d",N);
+     for(int i=0;i<N;i++)
+     gets(char)      
+    return chaine; 
+int main ()    
+   { 
+       int N;
+       scanf("%d";&N);
+       char*result=chage_chaine(N)
+       if(result!=Null)
+       printf("%s;\n";result);
+       return result ;
+   }
+   
+   int Longeur(char*ch);
+int length =0
+while(ch length!='\O')
+   length ++;
+   return length ;
+   int main () 
+      {
+      intN;
+      scanf("%d",&N);
+      char str[N+1]
+      gets(char);
+      int length =Longeur (str)
+      Printf ("%d" ,length);
+      return 0;
+      }
+      
+      
+      void charger_tab (char*p,char tab[]);
+int i=0;
+While (p[i]!='\o')
+tab[i]=p[i];
+i++;
+
+void Inverser tab(char tab[] ,char t[],int m);
+int i;
+for (i=0;i<m;i++)
+t[i]=tab[m-1-i]
+
+
+void AF_fichertab(char tab[],int m);
+int m;
+for (i=0;i<m;i++)
+printf("%c",tab[i]);
+printf ("\n");
+return 0;
