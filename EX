@@ -24,7 +24,7 @@ int longueur(char* ch) {
     return length;
 }
 
-// دالة لعكس السلسلة النصية
+// اجراء لعكس السلسلة النصية
 void inverser_tab(char* tab, char* t, int m) {
     for (int i = 0; i < m; i++) {
         t[i] = tab[m - 1 - i];  // عكس السلسلة
@@ -32,71 +32,7 @@ void inverser_tab(char* tab, char* t, int m) {
     t[m] = '\0';  // إضافة النهاية الصحيحة للسلسلة
 }
 
-// دالة لعرض السلسلة النصية
-void afficher_tab(char* tab) {
-    printf("السلسلة هي: %s\n", tab);
-}
-
-int main() {
-    int N;
-    printf("أدخل حجم السلسلة: ");
-    scanf("%d", &N);
-    getchar();  // لاستهلاك المحرف الزائد بعد scanf
-
-    // تحميل السلسلة النصية
-    char* result = charger_chaine(N);
-    if (result != NULL) {
-        afficher_tab(result);  // عرض السلسلة الأصلية
-        int len = longueur(result);  // حساب طول السلسلة
-        printf("طول السلسلة: %d\n", len);
-
-        // عكس السلسلة
-        char* reversed = (char*) malloc(len + 1);  // تخصيص ذاكرة للسلسلة المعكوسة
-        inverser_tab(result, reversed, len);
-        afficher_tab(reversed);  // عرض السلسلة المعكوسة
-
-        free(result);  // تحرير الذاكرة
-        free(reversed);  // تحرير الذاكرة
-    } else {
-        printf("حدث خطأ أثناء تحميل السلسلة.\n");
-    }
-
-    return 0;
-}#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-
-// دالة لتحميل السلسلة النصية من المستخدم
-char* charger_chaine(int N) {
-    char *chaine = (char*) malloc(N + 1);  // تخصيص ذاكرة ل N + 1 من الحروف
-    if (chaine == NULL) {  // إذا فشل تخصيص الذاكرة
-        printf("فشل تخصيص الذاكرة\n");
-        return NULL;
-    }
-    printf("أدخل السلسلة: ");
-    fgets(chaine, N + 1, stdin);  // قراءة السلسلة النصية
-    chaine[strcspn(chaine, "\n")] = '\0';  // إزالة المحرف '\n' في نهاية السلسلة
-    return chaine;
-}
-
-// دالة لحساب طول السلسلة النصية
-int longueur(char* ch) {
-    int length = 0;
-    while (ch[length] != '\0') {
-        length++;
-    }
-    return length;
-}
-
-// دالة لعكس السلسلة النصية
-void inverser_tab(char* tab, char* t, int m) {
-    for (int i = 0; i < m; i++) {
-        t[i] = tab[m - 1 - i];  // عكس السلسلة
-    }
-    t[m] = '\0';  // إضافة النهاية الصحيحة للسلسلة
-}
-
-// دالة لعرض السلسلة النصية
+// اجراء لعرض السلسلة النصية
 void afficher_tab(char* tab) {
     printf("السلسلة هي: %s\n", tab);
 }
